@@ -14,6 +14,10 @@ export class UsersService {
   }
 
   async getUsers(filter?: any) {
-    return this.usersRepository.find()
+    return this.usersRepository.find({where: filter})
+  }
+
+  async getUser(identifier: any) {
+    return this.usersRepository.findOne({where: identifier})
   }
 }
