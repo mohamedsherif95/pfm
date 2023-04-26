@@ -21,7 +21,7 @@ import { ConfigModule } from '@nestjs/config';
     password: 'medo12457896532',
     entities: [User],
     synchronize: true
-  }), UsersModule, AuthModule],
+  }), AuthModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })

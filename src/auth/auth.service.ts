@@ -23,10 +23,7 @@ export class AuthService {
     const payload = {email: user.email, sub: user.id}
     return {
       status: 'Logged in successfully',
-      access_token: this.jwtService.sign(
-        payload, 
-        {secret: jwtConstants.secret}
-        )
+      access_token: this.jwtService.sign(payload)
     }
   }
 }
