@@ -14,8 +14,11 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     TypeOrmModule.forRoot({
-    type: 'sqlite',
-    database: 'db.sqlite',
+    type: 'mysql',
+    database: 'pfm',
+    host: 'localhost',
+    username: 'root',
+    password: 'medo12457896532',
     entities: [User],
     synchronize: true
   }), UsersModule, AuthModule],
